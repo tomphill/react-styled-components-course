@@ -37,7 +37,7 @@ const ReactstrapRoundedButton = styled(ReactstrapButton)`
   }
 `;
 
-const FacebookButton = Button.extend`
+const FacebookButton = styled(Button)`
   border: none;
   background:#3B5998;
   color:white;
