@@ -6,6 +6,17 @@ import Button from './components/common/Button';
 import {Button as ReactstrapButton} from 'reactstrap';
 import PasswordInput from './components/common/PasswordInput';
 import Spinner from './components/common/Spinner';
+import {createGlobalStyle} from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`   
+  body{     
+    font-family: ${props => (props.theme.id === 'light' ? 'Arial' : 'Times New Roman')} !important;   
+  }      
+  
+  h1{     
+    color: blue !important;   
+  }
+`;
 
 const AppWrapper = styled.main`
   max-width: 800px;
@@ -111,6 +122,7 @@ class App extends Component {
                             Login with facebook (extending styles example)
                         </FacebookButton>
                     </ButtonWrapper>
+                    <GlobalStyle />
                 </AppWrapper>
             </ThemeProvider>
         );
